@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <title>Field Agent</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="row margin-bottom">
+            <div class="col">
+                <h3>Account</h3>
+            </div>
+            <!--                <div class="col right">
+                               <a th:href="@{/addAgent}" class="btn btn-primary">Add An Agent</a>
+                            </div>-->
+        </div>
+        <div>
+            <p> Your bank account: 
+                Your current balance:
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <h2>Borrow Activity<h2></h2>
+                
+                    <th>Principal</th>
+                    <th>Interest Rate</th>
+                    <th>Transfer Date</th>
+                    <th>Payback Date</th>
+                    <th>Compound Interval</th>
+
+                <tr >
+                    <tr th:each="borrowRequest : ${borrowRequests}">
+                    <td th:text="${borrowRequest.principal}">Principal</td>                    <td th:text="${assignment.startDate}">start</td>
+                    <td th:text="${assignment.actualEndDate}">end</td>
+                    <!--                            <td><a th:href="@{/deleteAssignment}" class="btn btn-danger">Delete</a></td>-->
+                    <td><a href="#" th:href="@{deleteAssignment(assignmentId=${assignment.assignmentId}, identifier=${assignment.agent.identifier})}" class="btn btn-danger">Delete</a></td>
+
+                    <td><a th:href="@{/editAssignment(assignmentId=${assignment.assignmentId}, identifier=${assignment.agent.identifier})}" class="btn btn-secondary">View/Edit</a></td>
+                </tr>
+
+
+
+                </tr>
+                </thead>
+                <tbody>
+
+                    </html>
